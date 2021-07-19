@@ -20,6 +20,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '5.0.x'
+        include-prerelease: true
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
@@ -52,5 +53,5 @@ jobs:
       with:
         app-name: 'sdbc-dev-01'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b7d18b2db8aa4077a13e07b52ce174eb }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_cd64cc9d8e8f4dd1a606aa8c9ca4d39d }}
         package: .
